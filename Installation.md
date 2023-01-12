@@ -24,7 +24,7 @@ Once connected, you should see something like
 
 ## Testing Some Commands
 
-The connected environment is a very standard linux machine.
+The connected environment is a standard linux machine.
 So a variety of standard bash commands can be used.
 These commands include but are not limited to:
 * cd
