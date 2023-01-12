@@ -34,6 +34,6 @@ These commands include but are not limited to:
 * etc.
 
 The following image shows a student testing commands in the linux environment that they ssh'd into.
-~[Image](https://github.com/KristopherManalo/cse15l-lab-reports/blob/main/TutorialImages/test.png?raw=true)
+![Image](https://github.com/KristopherManalo/cse15l-lab-reports/blob/main/TutorialImages/test.png?raw=true)
 
 
