@@ -14,5 +14,11 @@ In this tutorial you will learn how to install VS Code, SSH into another machine
 
 ## Remote Connection to CSE Computer (SSH)
 
+The following can only be done from a terminal set up to use bash.
+In the terminal type the command
+```$ ssh cs15lwi23[specific user code]@ieng6.ucsd.edu```
+For the student Kristoher Manalo, the specific user code is ```aud```
 
 ## Testing Some Commands
+
+The connected environment is a very standard linux machine.
