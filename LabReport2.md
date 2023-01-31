@@ -40,4 +40,8 @@ The following two images showcase two examples of the code being executed:
 ![Image](https://github.com/KristopherManalo/cse15l-lab-reports/blob/main/lab2Images/lab2image2.png?raw=true)
 * The method being called is handleRequest.
 * The relevant argument is the url of the page, where the path "/add-message?s=MAMA" is being split and "MAMA" is saved into parameters[1].
-* The varialbe returnString is being appended with the value of parameters[1] and a new line.
+* The varialbe returnString is being appended with the value of parameters[1] and a new line. The new value of return String is now
+```
+YOO
+MAMA
+```
