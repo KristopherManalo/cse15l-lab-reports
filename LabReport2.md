@@ -1,6 +1,7 @@
 # CSE15l Lab Report 2
 ## StringServer.java
-```
+The following block is my implementation of two classes: Handler and StringServer.
+```java
   1 import java.io.IOException;
   2 import java.net.URI;
   3
@@ -29,6 +30,11 @@
  26     }
  27 }
 ```
+The following two images showcase two examples of the code being executed:
+* The method acquires the path of the url, splits the path using delimiter "=" and adds from the url, anything after the "=" sign to the page's display.
+* The variable returnString changes each request that doesn't result in an error, where a string from the url is appended to a new line of returnString. 
 ![Image](https://github.com/KristopherManalo/cse15l-lab-reports/blob/main/lab2Images/lab2image1.png?raw=true)
+* The method being called is handleRequest.
+
 ![Image](https://github.com/KristopherManalo/cse15l-lab-reports/blob/main/lab2Images/lab2image2.png?raw=true)
 
