@@ -1,5 +1,5 @@
 # CSE15l Lab Report 2
-## StringServer.java
+## StringServer.java - Part 1
 The following block is my implementation of two classes: Handler and StringServer.
 ```java
   1 import java.io.IOException;
@@ -44,4 +44,56 @@ The following two images showcase two examples of the code being executed:
 ```
 YOO
 MAMA
+```
+## JUNIT Bug Fix - Part 2
+I chose to fix the bugs of averageWithoutLowest.
+Failure inducing JUnit test:
+```
+  @Test
+  public void testAverage3() {
+    double[] input6 = {1.0, 1.0};
+    assertEquals(ArrayExamples.averageWithoutLowest(input6), 1.0, 0.1);
+  }
+```
+Succesfful JUnit test:
+```
+  @Test
+  public void testAverage() {
+    double[] input4 = {5,6,7,8,9};
+    assertEquals(ArrayExamples.averageWithoutLowest(input4), 7.5, 0.01);
+  }
+```
+Code with bug:
+```
+  static double averageWithoutLowest(double[] arr) {
+    if(arr.length < 2) { return 0.0; }
+    double lowest = arr[0];
+    for(double num: arr) {
+      if(num < lowest) { lowest = num; }
+    }
+    double sum = 0;
+    for(double num: arr) {
+      if(num != lowest) { sum += num; }
+    }
+    return sum / (arr.length - 1);
+  }
+```
+Code fixed, without bug:
+```
+  static double averageWithoutLowest(double[] arr) {
+    if(arr.length < 2) { return 0.0; }
+    double lowest = arr[0];
+    for(double num: arr) {
+      if(num < lowest) { lowest = num; }
+    }
+    double sum = 0;
+    boolean skipped = false;
+    for(double num: arr) {
+      if(!(skipped) && num == lowest) {
+        skipped = true;
+        continue;
+      }
+      sum += num;
+    }
+    return sum / (arr.length - 1);
 ```
