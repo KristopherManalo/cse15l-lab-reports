@@ -48,7 +48,7 @@ MAMA
 ## JUNIT Bug Fix - Part 2
 I chose to fix the bugs of averageWithoutLowest.
 Failure inducing JUnit test:
-```
+```java
   @Test
   public void testAverage3() {
     double[] input6 = {1.0, 1.0};
@@ -56,15 +56,19 @@ Failure inducing JUnit test:
   }
 ```
 Succesfful JUnit test:
-```
+```java
   @Test
   public void testAverage() {
     double[] input4 = {5,6,7,8,9};
     assertEquals(ArrayExamples.averageWithoutLowest(input4), 7.5, 0.01);
   }
 ```
+### Symptom
+The code skips all instances of the recorded value, therefore, if there are multiple instances of the same lowest value, all instances will be skipped instead of just one. 
+Attempt to run the tests with the buggy code:
+![Image](https://github.com/KristopherManalo/cse15l-lab-reports/blob/main/lab2Images/lab2bug.png?raw=true)
 Code with bug:
-```
+```java
   static double averageWithoutLowest(double[] arr) {
     if(arr.length < 2) { return 0.0; }
     double lowest = arr[0];
@@ -79,7 +83,7 @@ Code with bug:
   }
 ```
 Code fixed, without bug:
-```
+```java
   static double averageWithoutLowest(double[] arr) {
     if(arr.length < 2) { return 0.0; }
     double lowest = arr[0];
@@ -97,3 +101,6 @@ Code fixed, without bug:
     }
     return sum / (arr.length - 1);
 ```
+Running the tests after fixing the code:
+![Image](![image](https://user-images.githubusercontent.com/45251091/215652192-481d5f40-3936-4002-ae66-a13561332441.png)
+)
