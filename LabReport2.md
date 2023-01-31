@@ -103,3 +103,6 @@ Code fixed, without bug:
 ```
 Running the tests after fixing the code:
 ![Image](https://github.com/KristopherManalo/cse15l-lab-reports/blob/main/lab2Images/lab2fix.png?raw=true)
+### The Fix
+The solution is to create a boolean value that represents a flag of whether the lowest value is skipped. Once it detects true, it will no longer skip any values, preventing situations where multiple instances of the same value are skipped.
+## What I learned - Part 3
