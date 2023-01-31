@@ -102,5 +102,4 @@ Code fixed, without bug:
     return sum / (arr.length - 1);
 ```
 Running the tests after fixing the code:
-![Image](![image](https://user-images.githubusercontent.com/45251091/215652192-481d5f40-3936-4002-ae66-a13561332441.png)
-)
+![Image](https://github.com/KristopherManalo/cse15l-lab-reports/blob/main/lab2Images/lab2fix.png?raw=true)
