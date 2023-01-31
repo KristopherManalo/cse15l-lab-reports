@@ -35,6 +35,9 @@ The following two images showcase two examples of the code being executed:
 * The variable returnString changes each request that doesn't result in an error, where a string from the url is appended to a new line of returnString. 
 ![Image](https://github.com/KristopherManalo/cse15l-lab-reports/blob/main/lab2Images/lab2image1.png?raw=true)
 * The method being called is handleRequest.
-
+* The relevant argument is the url of the page, where the path "/add-message?s=YOO" is being split and "YOO" is saved into parameters[1].
+* The varialbe returnString is being appended with the value of parameters[1] and a new line.
 ![Image](https://github.com/KristopherManalo/cse15l-lab-reports/blob/main/lab2Images/lab2image2.png?raw=true)
-
+* The method being called is handleRequest.
+* The relevant argument is the url of the page, where the path "/add-message?s=MAMA" is being split and "MAMA" is saved into parameters[1].
+* The varialbe returnString is being appended with the value of parameters[1] and a new line.
