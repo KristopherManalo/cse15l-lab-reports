@@ -40,7 +40,7 @@ The following two images showcase two examples of the code being executed:
 ![Image](https://github.com/KristopherManalo/cse15l-lab-reports/blob/main/lab2Images/lab2image2.png?raw=true)
 * The method being called is handleRequest.
 * The relevant argument is the url of the page, where the path "/add-message?s=MAMA" is being split, where "s" is parameters[0] and "MAMA" is saved into parameters[1].
-* The variable returnString is being appended with the value of parameters[1] and a new line. The new value of return String is now: `"YOO \n MAMA \n"`
+* The variable returnString is being appended with the value of parameters[1] and a new line. The new value of returnString is now: `"YOO \n MAMA \n"`
 ## JUNIT Bug Fix - Part 2
 I chose to fix the bugs of averageWithoutLowest.
 Failure inducing JUnit test:
@@ -102,3 +102,4 @@ Running the tests after fixing the code:
 ### The Fix
 The solution is to create a boolean value that represents a flag of whether the lowest value is skipped. Once it detects true, it will no longer skip any values, preventing situations where multiple instances of the same value are skipped.
 ## What I learned - Part 3
+Within the past 2 weeks, I learned much more about actually using JUnit. I am a tactile learner, naturally actually doing something in a lab is much more beneficial to me then listening or watching someone else debug a program. So the labwork requring the students to actively work towards debugging some code and writing tests has been incredibly valuable. Additionally, the concept of servers have always intmidated me, even the most basic step of using a prebuilt library doing the bulk of the hardwork for me. However setting up in lab has removed the first mental hurdle of the ideas of servers for me.
