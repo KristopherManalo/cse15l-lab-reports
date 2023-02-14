@@ -3,6 +3,7 @@
 ## Command to explore: `grep`
 
 ### `grep -r`
+Command line option was discovered by running `man grep` in bash.
 ```diff
 $ grep -r "mario" *
 written_2/travel_guides/berlitz1/WhatToHongKong.txt:        marionette shows are also on offer, often for free at public parks and
@@ -11,6 +12,7 @@ written_2/travel_guides/berlitz1/WhereToFrance.txt:        Ménec). The field of
 written_2/travel_guides/berlitz1/WhereToFrance.txt:        history of Lyon and displays of the marionettes of the town’s
 written_2/travel_guides/berlitz2/China-WhatToDo.txt:Popular with adults and children, the Chinese shadow play (a 2,000-year-old art form) dramatizes familiar legends. The two-dimensional puppets, manipulated behind a silk screen, can jump and fly, giving the colorful silhouettes an advantage over the actors in Chinese opera. The busy puppeteers give voice to their characters, often in song. Professional and amateur shadow-play troupes also put on shows with marionettes.
 ```
+The command-line option is searching for the string "mario" in all the files present in written_2, displaying the path and the line that contains the string. Useful for if I wanted info on any people with names similar to the string, in a general sense its useful to search the content of a directory to figure out quickly what is inside the directory.
 ```diff
 $ grep -r " nuts " *
 written_2/non-fiction/OUP/Kauffman/ch9.txt:All goes well until all the screws are used up. The seat, having relied on screws and screwdrivers to attach padding, goes nuts and looks about frantically, asking the screwdriver to work on nails. No luck. Eventually, the seat tries nails and hammers jointly, and that complementary pair works. More chairs are constructed, then nails run out and failures propagate throughout the system.
@@ -23,7 +25,10 @@ written_2/travel_guides/berlitz2/Athens-WhereToGo.txt:This is the closest island
 written_2/travel_guides/berlitz2/Crete-WhatToDo.txt:Honey is also one of the prime staples of the Cretan diet. Wild herbs and flowers on the hills impart a wonderful flavor, and you can buy it plain or with nuts added.
 written_2/travel_guides/berlitz2/Nepal-WhereToGo.txt:Bhaktapur expanded over the centuries from a nucleus around the Tachupal Tole, reached by a walk from the Nyatapola Temple through narrow streets full of unfamiliar merchandise: the lengths of red yarn are sold to be plaited in women’s hair; the gray cannonballs are homemade soap, the conical yellowish cigarettes are bidi, the cheapest tobacco, and can be bought singly. There will be heaps of orange turmeric, cardamom, ginger, and other spices, and bundles of dried fish, looking like twigs. Pan sellers offer to mix lime, spices, and bits of nuts and tobacco in a fresh betel-leaf packet for chewing. Bigger leaves stuck together with bamboo toothpicks are sold as plates for temple offerings.
 ```
+The command-line option is searching for the string " nuts " in all files present in written_2, displaying the path and the line that contains the string. Useful if I wanted to gain knowledge of some nuts that are considered a delicacy of vacation spots, in a general sense its useful to search the content of a directory to figure out quickly what is inside the directory.
+
 ### `grep -l`
+Command line option was discovered by running `man grep` in bash.
 ```diff
 $ cd written_2/travel_guides/berlitz2
 $ grep -l "California" *
@@ -32,6 +37,7 @@ California-WhatToDo.txt
 California-WhereToGo.txt
 Canada-WhereToGo.txt
 ```
+The command line option displays only the name of the files that contain the provided string, in this case its searching for "California" and displays what files contain it. Useful as it reduces clutter by only showing the names of files with the desired info.
 ```diff
 $ cd written_2/travel_guides/berlitz2
 $ grep -l "Bahamas" *
@@ -41,7 +47,10 @@ Bahamas-WhatToDo.txt
 Bahamas-WhereToGo.txt
 Canada-WhereToGo.txt
 ```
+The command line option displays only the name of the files that contain the provided string, in this case its searching for "Bahamas" and displays what files contains it. Useful as it reduces visual clutter and allows for the results to be easily read.
+
 ### `grep -w`
+Command line option was discovered by running `man grep` in bash.
 ```diff
 $ grep -w "Lucayans" Bahamas-History.txt
 Centuries before the arrival of Columbus, a peaceful Amerindian people who called themselves the Luccucairi had settled in the Bahamas. Originally from South America, they had traveled up through the Caribbean islands, surviving by cultivating modest crops and from what they caught from sea and shore. Nothing in the experience of these gentle people could have prepared them for the arrival of the Pinta, the Niña, and the Santa Maria at San Salvador on 12 October 1492. Columbus believed that he had reached the East Indies and mistakenly called these people Indians. We know them today as the Lucayans. Columbus claimed the island and others in the Bahamas for his royal Spanish patrons, but not finding the gold and other riches he was seeking, he stayed for only two weeks before sailing towards Cuba.
@@ -52,6 +61,7 @@ $ grep -w "Mario" Vallarta-WhatToDo.txt
 The southernmost golf course is the 18-hole, par 72, Tangolunda Golf Course (Tel. (9) 58 1-0037) in Huatulco. It’s a rather small and narrow course, designed by Mario Schjetnan Dantán.
 ```
 ### `grep -R`
+Command line option was discovered by running `man grep` in bash.
 ```diff
 $ grep -R "blender"
 OUP/Kauffman/ch7.txt:I am fond of telling the Noah’s Vessel experiment, hypothetical though it is. I ask, thereby, whether the biosphere is supracritical. Take two of every species, all hundred million of them, male and female, normalizing a bit for mass (so you have small bits of hippos and elephants per fly). Dump them all into a large blender and homogenize the hell out of them, breaking all tissue and cell boundaries, spilling out the stu of life into a common, homogenized liquor.
