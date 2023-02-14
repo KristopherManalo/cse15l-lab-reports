@@ -2,4 +2,12 @@
 
 ## Command to explore: `grep`
 
+### `grep --color`
+
+###
+
+###
+
+###
+
 ## Works Cited
