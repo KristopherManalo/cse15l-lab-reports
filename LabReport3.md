@@ -24,9 +24,18 @@ written_2/travel_guides/berlitz2/Crete-WhatToDo.txt:Honey is also one of the pri
 written_2/travel_guides/berlitz2/Nepal-WhereToGo.txt:Bhaktapur expanded over the centuries from a nucleus around the Tachupal Tole, reached by a walk from the Nyatapola Temple through narrow streets full of unfamiliar merchandise: the lengths of red yarn are sold to be plaited in women’s hair; the gray cannonballs are homemade soap, the conical yellowish cigarettes are bidi, the cheapest tobacco, and can be bought singly. There will be heaps of orange turmeric, cardamom, ginger, and other spices, and bundles of dried fish, looking like twigs. Pan sellers offer to mix lime, spices, and bits of nuts and tobacco in a fresh betel-leaf packet for chewing. Bigger leaves stuck together with bamboo toothpicks are sold as plates for temple offerings.
 ```
 ###
-
+```diff
+```
+```diff
+```
 ###
-
+```diff
+```
+```diff
+```
 ###
-
+```diff
+```
+```diff
+```
 ## Works Cited
