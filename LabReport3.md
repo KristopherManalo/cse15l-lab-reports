@@ -23,19 +23,39 @@ written_2/travel_guides/berlitz2/Athens-WhereToGo.txt:This is the closest island
 written_2/travel_guides/berlitz2/Crete-WhatToDo.txt:Honey is also one of the prime staples of the Cretan diet. Wild herbs and flowers on the hills impart a wonderful flavor, and you can buy it plain or with nuts added.
 written_2/travel_guides/berlitz2/Nepal-WhereToGo.txt:Bhaktapur expanded over the centuries from a nucleus around the Tachupal Tole, reached by a walk from the Nyatapola Temple through narrow streets full of unfamiliar merchandise: the lengths of red yarn are sold to be plaited in women’s hair; the gray cannonballs are homemade soap, the conical yellowish cigarettes are bidi, the cheapest tobacco, and can be bought singly. There will be heaps of orange turmeric, cardamom, ginger, and other spices, and bundles of dried fish, looking like twigs. Pan sellers offer to mix lime, spices, and bits of nuts and tobacco in a fresh betel-leaf packet for chewing. Bigger leaves stuck together with bamboo toothpicks are sold as plates for temple offerings.
 ```
-###
+### `grep -l`
 ```diff
+$ cd written_2/travel_guides/berlitz2
+$ grep -l "California" *
+California-History.txt
+California-WhatToDo.txt
+California-WhereToGo.txt
+Canada-WhereToGo.txt
 ```
 ```diff
+$ cd written_2/travel_guides/berlitz2
+$ grep -l "Bahamas" *
+Bahamas-History.txt
+Bahamas-Intro.txt
+Bahamas-WhatToDo.txt
+Bahamas-WhereToGo.txt
+Canada-WhereToGo.txt
 ```
-###
+### `grep -w`
 ```diff
+$ grep -w "Lucayans" Bahamas-History.txt
+Centuries before the arrival of Columbus, a peaceful Amerindian people who called themselves the Luccucairi had settled in the Bahamas. Originally from South America, they had traveled up through the Caribbean islands, surviving by cultivating modest crops and from what they caught from sea and shore. Nothing in the experience of these gentle people could have prepared them for the arrival of the Pinta, the Niña, and the Santa Maria at San Salvador on 12 October 1492. Columbus believed that he had reached the East Indies and mistakenly called these people Indians. We know them today as the Lucayans. Columbus claimed the island and others in the Bahamas for his royal Spanish patrons, but not finding the gold and other riches he was seeking, he stayed for only two weeks before sailing towards Cuba.
+The Spaniards never bothered to settle in the Bahamas, but the number of shipwrecks attest that their galleons frequently passed through the archipelago en route to and from the Caribbean, Florida, Bermuda, and their home ports. On Eleuthera the explorers dug a fresh-water well — at a spot now known as “Spanish Wells” — which was used to replenish the supplies of water on their ships before they began the long journey back to Europe with their cargoes of South American gold. As for the Lucayans, within 25 years all of them, perhaps some 30,000 people, were removed from the Bahamas to work — and die — in Spanish gold mines and on farms and pearl fisheries on Hispaniola (Haiti), Cuba, and elsewhere in the Caribbean.
 ```
 ```diff
+$ grep -w "Mario" Vallarta-WhatToDo.txt
+The southernmost golf course is the 18-hole, par 72, Tangolunda Golf Course (Tel. (9) 58 1-0037) in Huatulco. It’s a rather small and narrow course, designed by Mario Schjetnan Dantán.
 ```
-###
+### `grep $`
 ```diff
 ```
 ```diff
 ```
 ## Works Cited
+https://www.digitalocean.com/community/tutorials/grep-command-in-linux-unix
+https://www.geeksforgeeks.org/grep-command-in-unixlinux/
