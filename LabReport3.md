@@ -2,10 +2,14 @@
 
 ## Command to explore: `grep`
 
-### `grep --color`
+### `grep -r`
 ```diff
-$ grep --color "Mario" written_2/travel_guides/berlitz2/California-WhereToGo.txt
-William Randolph Hearst (1863–1951) was a millionaire newspaper baron. He began building this grandiose retreat in 1919 on a ranch that he had inherited from his father, who made his fortune mining Nevada’s Comstock Lode. It was still not completed by the time of Hearst’s death in 1951. Here he entertained the movie star @@ Mario @@ n Davies, his mistress for 30 years, and famous guests such as Charlie Chaplin, Scott and Zelda Fitzgerald, Greta Garbo, Winston Churchill, Charles Lindbergh, and the photographer Herman Mankiewicz, who recorded life at San Simeon for posterity.
+$ grep -r "mario" *
+written_2/travel_guides/berlitz1/WhatToHongKong.txt:        marionette shows are also on offer, often for free at public parks and
+written_2/travel_guides/berlitz1/WhereToFrance.txt:        watching the marionette shows, riding donkeys, and sailing boats on the
+written_2/travel_guides/berlitz1/WhereToFrance.txt:        Ménec). The field of Kermario has a dolmen (chamber built of flat slabs
+written_2/travel_guides/berlitz1/WhereToFrance.txt:        history of Lyon and displays of the marionettes of the town’s
+written_2/travel_guides/berlitz2/China-WhatToDo.txt:Popular with adults and children, the Chinese shadow play (a 2,000-year-old art form) dramatizes familiar legends. The two-dimensional puppets, manipulated behind a silk screen, can jump and fly, giving the colorful silhouettes an advantage over the actors in Chinese opera. The busy puppeteers give voice to their characters, often in song. Professional and amateur shadow-play troupes also put on shows with marionettes.
 ```
 ```bash
 ```
