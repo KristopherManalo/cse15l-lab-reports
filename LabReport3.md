@@ -4,6 +4,7 @@
 
 ### `grep -r`
 Command line option was discovered by running `man grep` in bash.
+`grep -r` recursively searches every file in the current directory or provided file path.
 ```diff
 $ grep -r "mario" *
 written_2/travel_guides/berlitz1/WhatToHongKong.txt:        marionette shows are also on offer, often for free at public parks and
@@ -27,8 +28,11 @@ written_2/travel_guides/berlitz2/Nepal-WhereToGo.txt:Bhaktapur expanded over the
 ```
 The command-line option is searching for the string " nuts " in all files present in written_2, displaying the path and the line that contains the string. Useful if I wanted to gain knowledge of some nuts that are considered a delicacy of vacation spots, in a general sense its useful to search the content of a directory to figure out quickly what is inside the directory.
 
+```grep -r``` differs from ```grep``` in that adding the -r flag will allow grep to recursively search inside of folders for the file, while without the flag, grep will only search the current directory and none of its children.
+
 ### `grep -l`
 Command line option was discovered by running `man grep` in bash.
+`grep -l` Prints out the name of each file containing the provided string, ommiting the normal output of the text containing the string.
 ```diff
 $ cd written_2/travel_guides/berlitz2
 $ grep -l "California" *
@@ -49,8 +53,11 @@ Canada-WhereToGo.txt
 ```
 The command line option displays only the name of the files that contain the provided string, in this case its searching for "Bahamas" and displays what files contains it. Useful as it reduces visual clutter and allows for the results to be easily read.
 
+`grep -l` gains use in readability. Say if there were several files with multiple instances of the string, the file name would appear in output multiple times attached to multiple standard outputs. Adding the -l flag, compresses its instances into an easily readable line simply saying the files contains it. There will be no duplicates
+
 ### `grep -w`
 Command line option was discovered by running `man grep` in bash.
+`grep -w` prints, exclusively, the line that contains the given string in a provided file.
 ```diff
 $ grep -w "Lucayans" Bahamas-History.txt
 Centuries before the arrival of Columbus, a peaceful Amerindian people who called themselves the Luccucairi had settled in the Bahamas. Originally from South America, they had traveled up through the Caribbean islands, surviving by cultivating modest crops and from what they caught from sea and shore. Nothing in the experience of these gentle people could have prepared them for the arrival of the Pinta, the Niña, and the Santa Maria at San Salvador on 12 October 1492. Columbus believed that he had reached the East Indies and mistakenly called these people Indians. We know them today as the Lucayans. Columbus claimed the island and others in the Bahamas for his royal Spanish patrons, but not finding the gold and other riches he was seeking, he stayed for only two weeks before sailing towards Cuba.
@@ -62,18 +69,121 @@ $ grep -w "Mario" Vallarta-WhatToDo.txt
 The southernmost golf course is the 18-hole, par 72, Tangolunda Golf Course (Tel. (9) 58 1-0037) in Huatulco. It’s a rather small and narrow course, designed by Mario Schjetnan Dantán.
 ```
 The command line option displays the lines in a file that contains the exact word provided, in this case "Mario", giving context of the person named Mario, only useful since "Mario" was predetermined to exist in `Vallarta-WhatToDo.txt`.
-### `grep -R`
-Command line option was discovered by running `man grep` in bash.
-```diff
-$ grep -R "blender"
-OUP/Kauffman/ch7.txt:I am fond of telling the Noah’s Vessel experiment, hypothetical though it is. I ask, thereby, whether the biosphere is supracritical. Take two of every species, all hundred million of them, male and female, normalizing a bit for mass (so you have small bits of hippos and elephants per fly). Dump them all into a large blender and homogenize the hell out of them, breaking all tissue and cell boundaries, spilling out the stu of life into a common, homogenized liquor.
-OUP/Kauffman/ch7.txt:The small molecule diversity in the blender is presumably on the order of billions, the protein and polymer diversity is on the order of hundreds of trillions, thus . Assuming that any pair of molecular species can undergo at least one two substrate–two product reaction, the total number of reactions is, as noted above, the square of the molecular diversity, so is about . If the probability that any one protein species catalyzes any one reaction is, say, one in a trillion, or , then the expected number of catalyzed reactions is just the product of the number of reactions times the number of potential protein catalysts, divided by the probability that a given protein catalyzes a given reaction. This yields reactions times proteins divided by , which equals . In short, virtually all possible reactions will be catalyzed by something. Indeed, on average, each possible reaction will find dierent protein catalysts. A vast sustained explosion into the adjacent possible would occur. Ergo, the biosphere is supracritical. More precisely, the biosphere would be supracritical if all molecular species could be in eective contact with one another on short timescales. But all molecular species do not come in contact with one another willy-nilly, for molecular species are packaged into cells.
-OUP/Kauffman/ch8.txt:Recall the Noah’s Vessel experiment, with two of every species ground up in a blender, breaking all cell membranes, comingling the trillion or so proteins of the hundred million species with the thousands of small molecule metabolites. A supracritical explosion of chemical diversity would presumably ensue. As I noted, life has learned to avoid that fate. Cells are subcritical. Were they not, then any new chemical that chanced to enter the cells of Fredricka the fern would unleash a cascade of synthesis of novel molecular species, some of which would presumably kill poor Fredricka. Best defense? Stay subcritical. Why mess with that mess?
+### `grep -c`
+Command line option was disocvered by running `man grep` in bash.
+`grep -c` Prints a count of the lines that contained the given string in the file.
 ```
-The command line option recursively searches for the string in a directory, in this case seraching for the word "Blender." Useful for it allows someone to search for all files with minimal user input.
-```diff
-$ grep -R "Lucayans"
-berlitz2/Bahamas-History.txt:Centuries before the arrival of Columbus, a peaceful Amerindian people who called themselves the Luccucairi had settled in the Bahamas. Originally from South America, they had traveled up through the Caribbean islands, surviving by cultivating modest crops and from what they caught from sea and shore. Nothing in the experience of these gentle people could have prepared them for the arrival of the Pinta, the Niña, and the Santa Maria at San Salvador on 12 October 1492. Columbus believed that he had reached the East Indies and mistakenly called these people Indians. We know them today as the Lucayans. Columbus claimed the island and others in the Bahamas for his royal Spanish patrons, but not finding the gold and other riches he was seeking, he stayed for only two weeks before sailing towards Cuba.
-berlitz2/Bahamas-History.txt:The Spaniards never bothered to settle in the Bahamas, but the number of shipwrecks attest that their galleons frequently passed through the archipelago en route to and from the Caribbean, Florida, Bermuda, and their home ports. On Eleuthera the explorers dug a fresh-water well — at a spot now known as “Spanish Wells” — which was used to replenish the supplies of water on their ships before they began the long journey back to Europe with their cargoes of South American gold. As for the Lucayans, within 25 years all of them, perhaps some 30,000 people, were removed from the Bahamas to work — and die — in Spanish gold mines and on farms and pearl fisheries on Hispaniola (Haiti), Cuba, and elsewhere in the Caribbean.
+$ written_2/travel_guides/berlitz1$ grep -c "Mario" *
+HandRHawaii.txt:0
+HandRHongKong.txt:0
+HandRIbiza.txt:0
+HandRIsrael.txt:0
+HandRIstanbul.txt:0
+HandRJamaica.txt:0
+HandRJerusalem.txt:0
+HandRLakeDistrict.txt:0
+HandRLasVegas.txt:0
+HandRLisbon.txt:0
+HandRLosAngeles.txt:0
+HandRMadeira.txt:0
+HandRMadrid.txt:0
+HandRMallorca.txt:0
+HistoryDublin.txt:0
+HistoryEdinburgh.txt:0
+HistoryEgypt.txt:0
+HistoryFWI.txt:0
+HistoryFrance.txt:0
+HistoryGreek.txt:0
+HistoryHawaii.txt:0
+HistoryHongKong.txt:0
+HistoryIbiza.txt:0
+HistoryIndia.txt:0
+HistoryIsrael.txt:0
+HistoryIstanbul.txt:0
+HistoryItaly.txt:0
+HistoryJamaica.txt:0
+HistoryJapan.txt:0
+HistoryJerusalem.txt:0
+HistoryLakeDistrict.txt:0
+HistoryLasVegas.txt:0
+HistoryMadeira.txt:0
+HistoryMadrid.txt:0
+HistoryMalaysia.txt:0
+HistoryMallorca.txt:0
+IntroDublin.txt:0
+IntroEdinburgh.txt:0
+IntroEgypt.txt:0
+IntroFWI.txt:0
+IntroFrance.txt:0
+IntroGreek.txt:0
+IntroHongKong.txt:0
+IntroIbiza.txt:0
+IntroIndia.txt:0
+IntroIsrael.txt:0
+IntroIstanbul.txt:0
+IntroItaly.txt:0
+IntroJamaica.txt:0
+IntroJapan.txt:0
+IntroJerusalem.txt:0
+IntroLakeDistrict.txt:0
+IntroLasVegas.txt:0
+IntroLosAngeles.txt:0
+IntroMadeira.txt:0
+IntroMadrid.txt:0
+IntroMalaysia.txt:0
+IntroMallorca.txt:0
+JungleMalaysia.txt:0
+WhatToDublin.txt:0
+WhatToEdinburgh.txt:0
+WhatToEgypt.txt:0
+WhatToFWI.txt:0
+WhatToFrance.txt:0
+WhatToGreek.txt:0
+WhatToHawaii.txt:0
+WhatToHongKong.txt:0
+WhatToIbiza.txt:0
+WhatToIndia.txt:0
+WhatToIsrael.txt:0
+WhatToIstanbul.txt:0
+WhatToItaly.txt:0
+WhatToJamaica.txt:0
+WhatToJapan.txt:0
+WhatToLakeDistrict.txt:0
+WhatToLasVegas.txt:0
+WhatToLosAngeles.txt:0
+WhatToMadeira.txt:0
+WhatToMalaysia.txt:0
+WhatToMallorca.txt:0
+WhereToDublin.txt:0
+WhereToEdinburgh.txt:1
+WhereToEgypt.txt:0
+WhereToFWI.txt:0
+WhereToFrance.txt:0
+WhereToGreek.txt:0
+WhereToHawaii.txt:0
+WhereToHongKong.txt:0
+WhereToIbiza.txt:0
+WhereToIndia.txt:0
+WhereToIsrael.txt:0
+WhereToIstanbul.txt:0
+WhereToItaly.txt:0
+WhereToJapan.txt:0
+WhereToJerusalem.txt:0
+WhereToLakeDistrict.txt:0
+WhereToLosAngeles.txt:0
+WhereToMadeira.txt:0
+WhereToMadrid.txt:0
+WhereToMalaysia.txt:0
+WhereToMallorca.txt:0
 ```
-The command line option recursively searches for the string in a directory, in this case searching for the word "Lucayans." Useful as it quickly found the file that contained the word and displayed the lines that contained the word with minimal bash usage.
+Only WhereToEdinburgh.txt contains the string "Mario", while thes rest do not.
+```
+$ written_2/non-fiction/OUP/Berk$ grep -c "America" *
+CH4.txt:4
+ch1.txt:17
+ch2.txt:19
+ch7.txt:6
+```
+All files in the directory contained the string "America".
+
+`grep -c` gains use due to the utility of knowing if a file contains a keyword. If a file does not contain a keyword, you can skip any further operations on it.
