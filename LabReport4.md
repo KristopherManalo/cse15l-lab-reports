@@ -59,6 +59,6 @@ git push
 - The first command will stage the changes done to all java files
 - The second command will commit the changes and assert an update message
 - The third command will push the changes to the github repository initially cloned from
-![Image](https://github.com/KristopherManalo/cse15l-lab-reports/blob/9a47ca897562bd87463505739d00fd0f4b26590f/labReport4Images/Step9.png)
+![Image](https://github.com/KristopherManalo/cse15l-lab-reports/blob/main/labReport4Images/Step9.png?raw=true)
 
 ## The process is complete
