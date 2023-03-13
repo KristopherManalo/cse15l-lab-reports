@@ -10,6 +10,7 @@ Cons:
 - Much more setup time
 - Slightly more annoying to edit
     - For example, if there is an error in the bash script, would require to open the file and find the line where the error is happening rather then just modifying the command that errored at command line.
+
 ## The original steps
 1. Log onto ieng6
 2. Clone the fork onto ieng6
@@ -17,6 +18,7 @@ Cons:
 4. Correct the code
 5. Running the tests with corrected code
 6. Uploading to GitHub
+
 ## Using a bash script
 ### 1. Making a bash script
 In a terminal, we must first touch the bash script file.
@@ -46,3 +48,10 @@ git add *.java
 git commit -m "Updated ListExamples.java"
 git push
 ```
+
+### Prep is complete
+
+##
+To complete the tasks of Lab Report 4, all that is required now, instead of the previous 6 steps is 2.
+1. Log into ieng6
+2. Run `bash run.sh`
