@@ -7,4 +7,4 @@ Pros:
 Cons:
 - Much more setup time
 - Slightly more annoying to edit
- -- For example, if there is an error in the bash script, would require to open the file and find the line where the error is happening rather then just modifying the command that errored at command line.
+    - For example, if there is an error in the bash script, would require to open the file and find the line where the error is happening rather then just modifying the command that errored at command line.
