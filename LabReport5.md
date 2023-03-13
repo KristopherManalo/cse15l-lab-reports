@@ -51,7 +51,9 @@ git push
 
 ### Prep is complete
 
-##
-To complete the tasks of Lab Report 4, all that is required now, instead of the previous 6 steps is 2.
+## Execution
+To complete the tasks of Lab Report 4, all that is required now, instead of the previous six, steps is two.
 1. Log into ieng6
 2. Run `bash run.sh`
+
+And the process is complete.
