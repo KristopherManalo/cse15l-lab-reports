@@ -1,6 +1,7 @@
 # Lab Report 5 - Lab Report 4 REDUX
 ## Automization
 The solution to make it more streamline is to use a bash script.
+
 Pros:
 - All commands will run from in order from a single execution
 - Faster
